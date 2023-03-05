@@ -5,7 +5,7 @@ export function throttle(fn, delay) {
       args = [...arguments]
     if (!timer) {
       timer = setTimeout(() => {
-        fn.apply(context, this)
+        fn.apply(context, args)
         timer = null
       }, delay)
     }
